@@ -5,6 +5,8 @@ bool canBeStabilized(long long* a[],int n,int m){
     int b;
     bool found=false;
 
+    if(n>=2 && m>=2){
+
     for (int y=0;y<n;y++){
             if (found){
                 break;
@@ -81,6 +83,35 @@ bool canBeStabilized(long long* a[],int n,int m){
                     }
                 }
         }
+    }}else {
+        if(n==1){
+            for(int x=0;x<m;x++){
+                if(x==0 && a[0][x]>a[0][1]){
+                    a[0][x]=a[0][1];
+                    found=true;
+                } else if(x<m-1 && a[0][x]>a[0][x+1] && a[0][x]>a[0][x-1]){
+                    a[0][x]=max(a[0][x+1],a[0][x-1]);
+                    found=true;
+                } else if(a[0][m-1]>a[0][m-2]){
+                    a[0][m-1]=a[0][m-2];\
+                    found=true;
+                }
+            }
+        } else if(m==1){
+            for(int y=0;y<n;y++){
+                if(y==0 && a[y][0]>a[y+1][0]){
+                    a[y][0]=a[y+1][0];
+                    found=true;
+                } else if(y<n-1 && a[y][0]>a[y+1][0] && a[y][0]>a[y-1][0]){
+                    a[y][0]=max(a[y+1][0],a[y-1][0]);
+                    found=true;
+                } else if(a[n-1][0]>a[n-2][0]){
+                    a[n-1][0]=a[n-2][0];
+                    found=true;
+                }
+            }
+        }
+
     }
     if (found){
         return true;
@@ -93,9 +124,9 @@ int* getStabilizeCoordinate(long long* a[],int n,int m){
     int ax;
     int b;
     bool found=false;
+    if(n>=2 && m>=2){
     for (int y=0;y<n;y++){
             if (found){
-                break;
             }
             for (int x=0;x<m;x++){
                 if(y<n-1 && y>0){
@@ -105,7 +136,7 @@ int* getStabilizeCoordinate(long long* a[],int n,int m){
                             ax=y;
                             b=x;
                             a[y][x]=max(a[y-1][x],max(a[y][x-1],max(a[y+1][x],a[y][x+1])));
-                            break;
+
                         }
                     } else if(x==0){
                         if(a[y][x]>a[y-1][x] && a[y][x]>a[y+1][x] && a[y][x]>a[y][x+1]){
@@ -113,7 +144,6 @@ int* getStabilizeCoordinate(long long* a[],int n,int m){
                             ax=y;
                             b=x;
                             a[y][x]=max(a[y-1][x],max(a[y+1][x],a[y][x+1]));
-                            break;
                         }
                     } else if(x==m-1){
                         if(a[y][x]>a[y-1][x] && a[y][x]>a[y+1][x] && a[y][x]>a[y][x-1]){
@@ -121,7 +151,6 @@ int* getStabilizeCoordinate(long long* a[],int n,int m){
                             ax=y;
                             b=x;
                             a[y][x]=max(a[y-1][x],max(a[y+1][x],a[y][x-1]));
-                            break;
                         }
                     }
                 } else if(y==0){
@@ -131,7 +160,6 @@ int* getStabilizeCoordinate(long long* a[],int n,int m){
                             ax=y;
                             b=x;
                             a[y][x]=max(a[y][x-1],max(a[y+1][x],a[y][x+1]));
-                            break;
                         }
                     } else if(x==0){
                         if(a[y][x]>a[y+1][x] && a[y][x]>a[y][x+1]){
@@ -139,7 +167,6 @@ int* getStabilizeCoordinate(long long* a[],int n,int m){
                             ax=y;
                             b=x;
                             a[y][x]=max(a[y+1][x],a[y][x+1]);
-                            break;
                         }
                     } else if(x==m-1){
                         if(a[y][x]>a[y+1][x] && a[y][x]>a[y][x-1]){
@@ -147,7 +174,6 @@ int* getStabilizeCoordinate(long long* a[],int n,int m){
                             ax=y;
                             b=x;
                             a[y][x]=max(a[y+1][x],a[y][x-1]);
-                            break;
                         }
                     }
                 } else {
@@ -157,7 +183,6 @@ int* getStabilizeCoordinate(long long* a[],int n,int m){
                             ax=y;
                             b=x;
                             a[y][x]=max(a[y][x-1],max(a[y-1][x],a[y][x+1]));
-                            break;
                         }
                     } else if(x==0){
                         if(a[y][x]>a[y-1][x] && a[y][x]>a[y][x+1]){
@@ -165,7 +190,6 @@ int* getStabilizeCoordinate(long long* a[],int n,int m){
                             ax=y;
                             b=x;
                             a[y][x]=max(a[y-1][x],a[y][x+1]);
-                            break;
                         }
                     } else if(x==m-1){
                         if(a[y][x]>a[y-1][x] && a[y][x]>a[y][x-1]){
@@ -173,11 +197,33 @@ int* getStabilizeCoordinate(long long* a[],int n,int m){
                             ax=y;
                             b=x;
                             a[y][x]=max(a[y-1][x],a[y][x-1]);
-                            break;
                         }
                     }
                 }
         }
+    }} else {
+        if(n==1){
+            for(int x=0;x<m;x++){
+                if(x==0 && a[0][x]>a[0][1]){
+                    a[0][x]=a[0][1];
+                } else if(x<m-1 && a[0][x]>a[0][x+1] && a[0][x]>a[0][x-1]){
+                    a[0][x]=max(a[0][x+1],a[0][x-1]);
+                } else if(a[0][m-1]>a[0][m-2]){
+                    a[0][m-1]=a[0][m-2];
+                }
+            }
+        } else if(m==1){
+            for(int y=0;y<n;y++){
+                if(y==0 && a[y][0]>a[y+1][0]){
+                    a[y][0]=a[y+1][0];
+                } else if(y<n-1 && a[y][0]>a[y+1][0] && a[y][0]>a[y-1][0]){
+                    a[y][0]=max(a[y+1][0],a[y-1][0]);
+                } else if(a[n-1][0]>a[n-2][0]){
+                    a[n-1][0]=a[n-2][0];
+                }
+            }
+        }
+
     }
     int B[2];
     B[0]=ax;
