@@ -6,8 +6,7 @@ using namespace std;
 signed main(){
     int n,k;
     cin>>n>>k;
-    cerr.precision(15);
-	cout.precision(15);
+	//cout.precision(15);
 	cerr << fixed;
 	cout << fixed;
     long double Max=0;
@@ -20,7 +19,7 @@ signed main(){
             Max=max(Max,(long double)(pf[y+1]-pf[x])/(y-x+1));
         }
     }
-    cout<<Max<<'\n';
+    cout<<setprecision(15)<<Max<<'\n';
 
 }
 

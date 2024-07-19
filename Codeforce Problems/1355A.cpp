@@ -4,24 +4,24 @@ using namespace std;
 
 int minDigit(int g){
     int n=g;
-    int a[(int)log(n)+2];
     int Min=n%10;
-    for(int i=0;i<(int)log(n)+2;i++){
-        a[i]=n%10;
+    int d;
+    while(n){
+        d=n%10;
         n=n/10;
-        if(a[i]<Min)Min=a[i];
+        if(d<Min)Min=d;
     }
     return Min;
 }
 
 int maxDigit(int g){
     int n=g;
-    int a[(int)log(n)+2];
     int Max=n%10;
-    for(int i=0;i<(int)log(n)+2;i++){
-        a[i]=n%10;
+    int d;
+    while(n){
+        d=n%10;
         n=n/10;
-        if(a[i]>Max)Max=a[i];
+        if(d>Max)Max=d;
     }
     return Max;
 }
