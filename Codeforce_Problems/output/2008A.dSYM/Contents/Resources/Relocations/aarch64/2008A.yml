@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/thomaskidane/Documents/Codeforce-Problems/Codeforce Problems/output/2008A'
+relocations:
+  - { offsetInCU: 0x16499, offset: 0x16499, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x64600, symBinAddr: 0x10000C028, symSize: 0x0 }
+  - { offsetInCU: 0x16F6E, offset: 0x16F6E, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_2008A.cpp, symObjAddr: 0xE0, symBinAddr: 0x100007E7C, symSize: 0x14 }
+  - { offsetInCU: 0x16F96, offset: 0x16F96, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0xA4, symBinAddr: 0x100007E40, symSize: 0x3C }
+  - { offsetInCU: 0x16F8F, offset: 0x16F8F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x3C, symBinAddr: 0x100007DE4, symSize: 0x5C }
+  - { offsetInCU: 0x16FC4, offset: 0x16FC4, size: 0x8, addend: 0x0, symName: __Z5solvev, symObjAddr: 0x0, symBinAddr: 0x100007DA8, symSize: 0x3C }
+...

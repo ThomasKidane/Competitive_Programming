@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/thomaskidane/Downloads/Codeforce-Problems/Codeforce Problems/output/1991B'
+relocations:
+  - { offsetInCU: 0x16CB8, offset: 0x16CB8, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x64C50, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x16F5D, offset: 0x16F5D, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x358, symBinAddr: 0x100003DE0, symSize: 0x5C }
+  - { offsetInCU: 0x16F92, offset: 0x16F92, size: 0x8, addend: 0x0, symName: __Z5solvev, symObjAddr: 0x0, symBinAddr: 0x100003A88, symSize: 0x358 }
+...
