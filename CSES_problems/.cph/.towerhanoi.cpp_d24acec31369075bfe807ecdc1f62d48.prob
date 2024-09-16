@@ -1,0 +1,1 @@
+{"name":"Local: towerhanoi","url":"/Users/thomaskidane/Documents/Coding_Problems/CSES_problems/towerhanoi.cpp","tests":[{"id":1726265030946,"input":"2","output":"3\n1 2\n1 3\n2 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/thomaskidane/Documents/Coding_Problems/CSES_problems/towerhanoi.cpp","group":"local","local":true}

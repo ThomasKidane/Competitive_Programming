@@ -1,0 +1,1 @@
+{"name":"Local: coinpiles","url":"/Users/thomaskidane/Documents/Coding_Problems/CSES_problems/coinpiles.cpp","tests":[{"id":1726205593994,"input":"3\n2 1\n2 2\n3 3","output":"YES\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/thomaskidane/Documents/Coding_Problems/CSES_problems/coinpiles.cpp","group":"local","local":true}

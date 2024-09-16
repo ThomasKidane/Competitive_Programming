@@ -1,0 +1,1 @@
+{"name":"Local: abc367c","url":"/Users/thomaskidane/Documents/Coding_Problems/abc367c.cpp","tests":[{"id":1725666421955,"input":"3 2\n2 1 3\n","output":"1 1 2\n2 1 1\n2 1 3\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/thomaskidane/Documents/Coding_Problems/abc367c.cpp","group":"local","local":true}
