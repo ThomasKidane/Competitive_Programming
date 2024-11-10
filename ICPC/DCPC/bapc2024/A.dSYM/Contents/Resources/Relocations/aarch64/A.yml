@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     A
+relocations:
+  - { offset: 0x513A, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x16A65, symBinAddr: 0x10000C068, symSize: 0x0 }
+  - { offset: 0x532C, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_A.cpp, symObjAddr: 0x508, symBinAddr: 0x100007DC8, symSize: 0x14 }
+  - { offset: 0x5343, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x4CC, symBinAddr: 0x100007D8C, symSize: 0x3C }
+  - { offset: 0x5361, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xB8, symBinAddr: 0x100007994, symSize: 0x3F8 }
+  - { offset: 0x54D6, size: 0x8, addend: 0x0, symName: __Z7find_psPPcii, symObjAddr: 0x0, symBinAddr: 0x1000078DC, symSize: 0xB8 }
+...

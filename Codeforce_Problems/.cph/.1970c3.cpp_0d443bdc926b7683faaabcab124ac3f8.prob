@@ -1,0 +1,1 @@
+{"name":"Local: 1970c3","url":"/Users/thomaskidane/Documents/Coding_Problems/Codeforce_Problems/1970c3.cpp","tests":[{"id":1731134298442,"input":"5 2\n1 2\n1 3\n3 4\n3 5\n1 2\n","output":"Ron\nRon\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/thomaskidane/Documents/Coding_Problems/Codeforce_Problems/1970c3.cpp","group":"local","local":true}

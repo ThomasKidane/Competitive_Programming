@@ -1,0 +1,1 @@
+{"name":"Local: 433B","url":"/Users/thomaskidane/Documents/Coding_Problems/Codeforce_Problems/433B.cpp","tests":[{"id":1729910206927,"input":"6\n6 4 2 7 2 7\n3\n2 3 6\n1 3 4\n1 1 6\n","output":"24\n9\n28\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/thomaskidane/Documents/Coding_Problems/Codeforce_Problems/433B.cpp","group":"local","local":true}
