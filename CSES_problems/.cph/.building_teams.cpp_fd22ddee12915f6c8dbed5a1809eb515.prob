@@ -1,0 +1,1 @@
+{"name":"Local: building_teams","url":"/Users/thomaskidane/Documents/Coding_Problems/CSES_problems/building_teams.cpp","tests":[{"id":1732917417573,"input":"5 4\n1 2\n3 4\n4 5\n5 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/thomaskidane/Documents/Coding_Problems/CSES_problems/building_teams.cpp","group":"local","local":true}

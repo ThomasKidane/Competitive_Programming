@@ -1,0 +1,1 @@
+{"name":"Local: 2039C","url":"/Users/thomaskidane/Documents/Coding_Problems/Codeforce_Problems/2039C.cpp","tests":[{"id":1732382916718,"input":"5\n6 9\n5 7\n2 3\n6 4\n4 1\n","output":"3\n2\n1\n1\n0\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/thomaskidane/Documents/Coding_Problems/Codeforce_Problems/2039C.cpp","group":"local","local":true}

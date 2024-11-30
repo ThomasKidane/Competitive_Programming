@@ -10,27 +10,37 @@ using namespace std;
 #define forn(i,n) for(int i=0;i<n;i++)
 #define dbgv(v) cout<<#v<<" "<<v<<endl
 #define dbga(a,n) forn(i,n-1) {cout<<a[i]<<' ';} cout<<a[n-1]<<'\n';
+
+struct VectorComparator {
+    bool operator()(const vector<ll>& a, const vector<ll>& b) {
+        // Prioritize based on the first element of each vector
+        return a[0] > b[0];
+    }
+};
 void solve(){
-    int h,n;
+    ll h,n;
     cin>>h>>n;
-    int a[n];
-    int c[n];
-    map<int,int> dic;
+    ll a[n];
+    ll c[n];
+    priority_queue<vector<ll>, vector<vector<ll>>, VectorComparator> attacks;
+    
     forn(i,n)cin>>a[i];
-    forn(i,n){cin>>c[i];dic[c[i]]+=1;}
-    ll LC=c[0];
-    forn(i,n)LC=lcm(LC,a[i]);
-    ll at[LC+1];
-    for(auto it=dic.begin();it!=dic.end();it++){
-        for(int i=0;i<=LC;i+=(it->first)){
-            at[i]+=(it->first)*(it->second);
-        }
+    forn(i,n){cin>>c[i];}
+    forn(i,n){attacks.push({1ll,c[i],a[i]});}
+    // sort(attacks.begin(),attacks.end(),comp);
+    ll t=1;
+    while(h>0){
+        h-=attacks.top().back();
+        t=attacks.top().front();
+        // attacks.top().front()+=attacks.top()[1];
+        vector<ll> car=attacks.top();
+        attacks.pop();
+        car.front()+=car[1];
+        attacks.push(car);
     }
-    ll cur=at[0];
-    forn(i,LC+1){
-        at[i+1]+=cur;
-        cur=at[i+1];
-    }
+
+    cout<<t<<endl;
+    
 }
 
 int main() {

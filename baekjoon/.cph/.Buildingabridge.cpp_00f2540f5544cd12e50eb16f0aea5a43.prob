@@ -1,0 +1,1 @@
+{"name":"Local: Buildingabridge","url":"/Users/thomaskidane/Documents/Coding_Problems/baekjoon/Buildingabridge.cpp","tests":[{"id":1732072019804,"input":"3\n2 2\n1 5\n13 29","output":"1\n5\n67863915\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/thomaskidane/Documents/Coding_Problems/baekjoon/Buildingabridge.cpp","group":"local","local":true}

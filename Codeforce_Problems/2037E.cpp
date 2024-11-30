@@ -14,6 +14,7 @@ using namespace std;
 ///idfhiheifekkl
 
 void askhandle(int l,int r,string& s,int n,int q){
+    if(l>=n || r>n)return;
     cout<<"? "<<l<<" "<<r<<endl;
     int v;
     cin>>v;
@@ -116,6 +117,7 @@ void solve(){
                 // dbgv(s);
                 if(s.size()<n){
                     askhandle(l-1,l+1,s,n,0);
+                    
                 }
                 
                 
