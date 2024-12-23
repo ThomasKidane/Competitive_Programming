@@ -64,3 +64,22 @@ bool isPalindrome(string s){
     if(s==t)return true;
     else return false;
 }
+
+
+pair<int,int> farthestnode(int e,int c,map<int,vector<int>>&adj,int dist[],int d){
+    int v=0;
+    pair<int,int> res={c,0};
+    for(int i:adj[c]){
+        if(i!=e){
+            pair<int,int> val=farthestnode(c,i,adj,dist,d+1);
+            if(val.ss+1>v){
+                v=val.ss+1;
+                val.ss++;
+                res=val;
+            }
+            
+        }
+    }
+    dist[c]=d;
+    return res;
+}

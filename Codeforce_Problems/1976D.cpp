@@ -11,8 +11,8 @@ using namespace std;
 #define dbgv(v) cout<<#v<<" "<<v<<endl
 #define dbga(a,n) forn(i,n-1) {cout<<a[i]<<' ';} cout<<a[n-1]<<'\n';
 
-const int MAXN=1e6;
-int maxarray[MAXN];
+const int MAXN=1e2;
+vector<int> maxarray(4*MAXN);
 
 
 // pair<int, int> combine(pair<int, int> a, pair<int, int> b) {
@@ -23,7 +23,7 @@ int maxarray[MAXN];
 //     return make_pair(a.first, a.second + b.second);
 // }
 
-void build(int a[], int v, int tl, int tr,int t[]) {
+void build(int a[], int v, int tl, int tr,vector<int> &t) {
     if (tl == tr) {
         t[v] = a[tl];
     } else {
@@ -34,7 +34,7 @@ void build(int a[], int v, int tl, int tr,int t[]) {
     }
 }
 
-int get_max(int v, int tl, int tr, int l, int r,int t[]) {
+int get_max(int v, int tl, int tr, int l, int r,vector<int> &t) {
     if (l > r)
         return -INFINITY;
     if (l == tl && r == tr)
@@ -44,7 +44,7 @@ int get_max(int v, int tl, int tr, int l, int r,int t[]) {
                    get_max(v*2+1, tm+1, tr, max(l, tm+1), r,t));
 }
 
-void update(int v, int tl, int tr, int pos, int new_val,int t[]) {
+void update(int v, int tl, int &tr, int &pos, int &new_val,vector<int>&t) {
     if (tl == tr) {
         t[v] = new_val;
     } else {

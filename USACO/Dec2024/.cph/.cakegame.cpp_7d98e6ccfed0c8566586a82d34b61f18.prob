@@ -1,0 +1,1 @@
+{"name":"Local: cakegame","url":"/Users/thomaskidane/Documents/Coding_Problems/USACO/Dec2024/cakegame.cpp","tests":[{"id":1734422679954,"input":"2\n4\n40 30 20 10\n4\n10 20 30 40","output":"60 40\n60 40"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/thomaskidane/Documents/Coding_Problems/USACO/Dec2024/cakegame.cpp","group":"local","local":true}
