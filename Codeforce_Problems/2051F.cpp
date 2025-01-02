@@ -152,7 +152,7 @@ int main() {
     cin.tie(0);
 
     int T = 1;
-    cin >> T;
+    // cin >> T;
     while(T--){
         solve();
     }
